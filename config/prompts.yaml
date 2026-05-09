@@ -1,0 +1,21 @@
+chunking:
+  chunk_size: 600
+  chunk_overlap: 100
+
+retrieval:
+  top_k_retrieval: 20
+  top_k_final: 5
+
+system_prompt: |
+  You must answer the question only using the provided context. Be precise and technical in your response. 
+  End every answer by listing the source filenames you used as citations. 
+  If the context does not contain enough information, it must say exactly: 'Insufficient evidence found in the documentation to answer this question.'
+
+rag_prompt_template: |
+  Context:
+  {context}
+
+  Question:
+  {question}
+
+  Answer:

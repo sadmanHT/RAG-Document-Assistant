@@ -1,0 +1,352 @@
+[
+    {
+        "question": "What is a Pod in Kubernetes?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a Pod in Kubernetes? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "How do containers within a Pod share storage?",
+        "ideal_answer": "This is a placeholder ideal answer for How do containers within a Pod share storage? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "What is the lifecycle of a Pod?",
+        "ideal_answer": "This is a placeholder ideal answer for What is the lifecycle of a Pod? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "Can a Pod contain multiple containers?",
+        "ideal_answer": "This is a placeholder ideal answer for Can a Pod contain multiple containers? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "How are Pods scheduled on nodes?",
+        "ideal_answer": "This is a placeholder ideal answer for How are Pods scheduled on nodes? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "What happens when a Pod fails?",
+        "ideal_answer": "This is a placeholder ideal answer for What happens when a Pod fails? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "How do Pods communicate with each other?",
+        "ideal_answer": "This is a placeholder ideal answer for How do Pods communicate with each other? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "What is a static Pod?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a static Pod? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "How do I view the logs of a Pod?",
+        "ideal_answer": "This is a placeholder ideal answer for How do I view the logs of a Pod? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "What are Pod phases?",
+        "ideal_answer": "This is a placeholder ideal answer for What are Pod phases? based on Kubernetes documentation for Pods. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "pods.md"
+        ]
+    },
+    {
+        "question": "What is a Kubernetes Deployment?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a Kubernetes Deployment? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "How does a Deployment manage ReplicaSets?",
+        "ideal_answer": "This is a placeholder ideal answer for How does a Deployment manage ReplicaSets? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "What is a rolling update in a Deployment?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a rolling update in a Deployment? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "How do I rollback a Deployment?",
+        "ideal_answer": "This is a placeholder ideal answer for How do I rollback a Deployment? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "Can I pause a Deployment rollout?",
+        "ideal_answer": "This is a placeholder ideal answer for Can I pause a Deployment rollout? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "What is the difference between a Deployment and a StatefulSet?",
+        "ideal_answer": "This is a placeholder ideal answer for What is the difference between a Deployment and a StatefulSet? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "How do deployments ensure high availability?",
+        "ideal_answer": "This is a placeholder ideal answer for How do deployments ensure high availability? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "What happens during a Deployment scale up?",
+        "ideal_answer": "This is a placeholder ideal answer for What happens during a Deployment scale up? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "What is maxSurge in a Deployment?",
+        "ideal_answer": "This is a placeholder ideal answer for What is maxSurge in a Deployment? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "How does a Deployment handle failed Pods?",
+        "ideal_answer": "This is a placeholder ideal answer for How does a Deployment handle failed Pods? based on Kubernetes documentation for Deployments. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "deployments.md"
+        ]
+    },
+    {
+        "question": "What is a Kubernetes Service?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a Kubernetes Service? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "What is a ClusterIP Service?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a ClusterIP Service? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "How does a NodePort Service work?",
+        "ideal_answer": "This is a placeholder ideal answer for How does a NodePort Service work? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "What is a LoadBalancer Service?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a LoadBalancer Service? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "How do Services route traffic to Pods?",
+        "ideal_answer": "This is a placeholder ideal answer for How do Services route traffic to Pods? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "What is an ExternalName Service?",
+        "ideal_answer": "This is a placeholder ideal answer for What is an ExternalName Service? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "What is a headless Service?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a headless Service? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "How does kube-proxy handle Service routing?",
+        "ideal_answer": "This is a placeholder ideal answer for How does kube-proxy handle Service routing? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "Can a Service span multiple namespaces?",
+        "ideal_answer": "This is a placeholder ideal answer for Can a Service span multiple namespaces? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "How do endpoints relate to a Service?",
+        "ideal_answer": "This is a placeholder ideal answer for How do endpoints relate to a Service? based on Kubernetes documentation for Services. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "services.md"
+        ]
+    },
+    {
+        "question": "What is a ConfigMap?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a ConfigMap? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "How do I mount a ConfigMap as a volume?",
+        "ideal_answer": "This is a placeholder ideal answer for How do I mount a ConfigMap as a volume? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "Can a ConfigMap be used as environment variables?",
+        "ideal_answer": "This is a placeholder ideal answer for Can a ConfigMap be used as environment variables? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "What are the limitations of ConfigMaps?",
+        "ideal_answer": "This is a placeholder ideal answer for What are the limitations of ConfigMaps? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "Are ConfigMaps secure for storing passwords?",
+        "ideal_answer": "This is a placeholder ideal answer for Are ConfigMaps secure for storing passwords? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "How do I update a ConfigMap?",
+        "ideal_answer": "This is a placeholder ideal answer for How do I update a ConfigMap? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "Do Pods automatically restart when a ConfigMap changes?",
+        "ideal_answer": "This is a placeholder ideal answer for Do Pods automatically restart when a ConfigMap changes? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "What is the maximum size of a ConfigMap?",
+        "ideal_answer": "This is a placeholder ideal answer for What is the maximum size of a ConfigMap? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "How can I create a ConfigMap from a file?",
+        "ideal_answer": "This is a placeholder ideal answer for How can I create a ConfigMap from a file? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "Can a ConfigMap hold binary data?",
+        "ideal_answer": "This is a placeholder ideal answer for Can a ConfigMap hold binary data? based on Kubernetes documentation for ConfigMaps. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "configmaps.md"
+        ]
+    },
+    {
+        "question": "What is a Kubernetes Namespace?",
+        "ideal_answer": "This is a placeholder ideal answer for What is a Kubernetes Namespace? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "How do Namespaces isolate resources?",
+        "ideal_answer": "This is a placeholder ideal answer for How do Namespaces isolate resources? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "What are the default namespaces in Kubernetes?",
+        "ideal_answer": "This is a placeholder ideal answer for What are the default namespaces in Kubernetes? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "Can I delete the default namespace?",
+        "ideal_answer": "This is a placeholder ideal answer for Can I delete the default namespace? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "How do resource quotas work with Namespaces?",
+        "ideal_answer": "This is a placeholder ideal answer for How do resource quotas work with Namespaces? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "Are Namespaces a security boundary?",
+        "ideal_answer": "This is a placeholder ideal answer for Are Namespaces a security boundary? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "How do Pods communicate across Namespaces?",
+        "ideal_answer": "This is a placeholder ideal answer for How do Pods communicate across Namespaces? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "What objects are not namespaced?",
+        "ideal_answer": "This is a placeholder ideal answer for What objects are not namespaced? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "How do I set the default Namespace for kubectl?",
+        "ideal_answer": "This is a placeholder ideal answer for How do I set the default Namespace for kubectl? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    },
+    {
+        "question": "Can Namespaces be nested?",
+        "ideal_answer": "This is a placeholder ideal answer for Can Namespaces be nested? based on Kubernetes documentation for Namespaces. It explains the core concept accurately in two to four sentences.",
+        "source_files": [
+            "namespaces.md"
+        ]
+    }
+]

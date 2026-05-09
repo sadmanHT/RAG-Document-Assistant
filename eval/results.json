@@ -1,0 +1,8 @@
+{
+    "timestamp": "2026-05-09T19:58:23.243317",
+    "metrics": {
+        "faithfulness": NaN,
+        "answer_relevancy": 0.66597824715936,
+        "context_precision": 0.0
+    },
+    "pass": 
