@@ -50,7 +50,7 @@ def robust_generate_and_eval():
         print("API Key missing.")
         sys.exit(1)
         
-    ragas_llm = PatchedGemini(model="gemini-3.1-flash-lite-preview", google_api_key=api_key)
+    ragas_llm = PatchedGemini(model="gemini-3-flash-preview", google_api_key=api_key)
     ragas_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     metrics_list = [faithfulness, answer_relevancy, context_precision]
     

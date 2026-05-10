@@ -24,7 +24,7 @@ rag_prompt_template = prompts.get("rag_prompt_template", "Context: {context}\n\n
 
 # Initialize Gemini model
 api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-llm = ChatGoogleGenerativeAI(model="gemini-3.1-flash-lite-preview", google_api_key=api_key)
+llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview", google_api_key=api_key)
 
 def generate_answer(query, context_chunks):
     formatted_contexts = []
