@@ -18,20 +18,9 @@ from datasets import Dataset
 
 from ragas import evaluate
 from ragas.metrics import faithfulness, answer_relevancy, context_precision
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
 from src.generation import ask
-
-# Monkey-patch to fix the ragas temperature kwargs bug with the new GenAI SDK
-class PatchedGemini(ChatGoogleGenerativeAI):
-    def generate_prompt(self, *args, **kwargs):
-        kwargs.pop("temperature", None)
-        time.sleep(20) # Hard delay to prevent Free Tier 5 RPM limit
-        return super().generate_prompt(*args, **kwargs)
-    def generate(self, *args, **kwargs):
-        kwargs.pop("temperature", None)
-        time.sleep(20) # Hard delay to prevent Free Tier 5 RPM limit
-        return super().generate(*args, **kwargs)
 
 def robust_generate_and_eval():
     load_dotenv()
@@ -43,14 +32,14 @@ def robust_generate_and_eval():
     with open(golden_file, "r", encoding="utf-8") as f:
         golden_dataset = json.load(f)
         
-    print(f"Loaded {len(golden_dataset)} evaluation questions. Running sequentially with heavy retry/delays...")
+    print(f"Loaded {len(golden_dataset)} evaluation questions. Running sequentially with retry/delays...")
     
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
-        print("API Key missing.")
+        print("GROQ API Key missing.")
         sys.exit(1)
         
-    ragas_llm = PatchedGemini(model="gemini-3-flash-preview", google_api_key=api_key)
+    ragas_llm = ChatGroq(model="llama-3.1-8b-instant", api_key=api_key)
     ragas_embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     metrics_list = [faithfulness, answer_relevancy, context_precision]
     
@@ -65,7 +54,7 @@ def robust_generate_and_eval():
         # 1. Robust Generation (retries indefinitely)
         while True:
             try:
-                 # Note: ask internally utilizes Gemini 2.5 flash in generation.py
+                 # Note: ask internally utilizes Groq API in generation.py
                 result = ask(question)
                 break
             except Exception as e:
@@ -85,10 +74,17 @@ def robust_generate_and_eval():
             try:
                 print("  evaluating metrics...")
                 # Note: internal evaluate makes multiple prompt calls behind the scenes
-                res = evaluate(dataset=ds, metrics=metrics_list, llm=ragas_llm, embeddings=ragas_embeddings)
                 
+                # Suppress the exception raising inside evaluate so rate limits don't crash the script run immediately
+                res = evaluate(dataset=ds, metrics=metrics_list, llm=ragas_llm, embeddings=ragas_embeddings, raise_exceptions=False)
+                print(f"DEBUG {i}: {res}")
+
                 for m in ["faithfulness", "answer_relevancy", "context_precision"]:
                     val = res.get(m, 0.0)
+                    import math
+                    if math.isnan(val):
+                        print(f"DEBUG {i}: Metric {m} is NaN! Setting to 0.0 to avoid poisoning sum.")
+                        val = 0.0
                     totals[m] += val
                 success_count += 1
                 break
@@ -96,13 +92,18 @@ def robust_generate_and_eval():
                 print(f"  [!] Evaluate Error (rate limits/network): {e}\n  Retrying in 60 seconds...")
                 time.sleep(60)
 
-        # 4. Delay to prevent 429 Resource Exhausted on Gemini Free Tier
-        # RAGAS internally triggers ~3 requests per metric. 
-        # A 30s delay between items easily guarantees we never hit the 15/RPM limit
+        # Print running averages
+        print("\n--- Current Running Averages ---")
+        for m in totals:
+            avg = totals[m] / success_count if success_count > 0 else 0.0
+            print(f"{m:<20}: {float(avg):.4f}")
+        print("--------------------------------\n")
+
+        # 4. Delay to prevent rate limits on Groq
         if i < len(golden_dataset) - 1:
-            print("  Sleeping 30 seconds to respect free-tier quotas...")
-            time.sleep(30)
-        
+            print("  Sleeping 60 seconds to respect Groq rate limits...")
+            time.sleep(60)
+
     # Final Output Report
     print("\n" + "="*30)
     print("RAGAS Evaluation Results")

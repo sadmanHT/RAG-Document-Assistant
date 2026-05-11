@@ -6,7 +6,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from dotenv import load_dotenv
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from src.retrieval import retrieve_and_rerank
@@ -22,9 +22,9 @@ with open(config_path, "r", encoding="utf-8") as f:
 system_prompt = prompts.get("system_prompt", "You are a helpful assistant.")
 rag_prompt_template = prompts.get("rag_prompt_template", "Context: {context}\n\nQuestion: {query}")
 
-# Initialize Gemini model
-api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-llm = ChatGoogleGenerativeAI(model="gemini-3-flash-preview", google_api_key=api_key)
+# Initialize Groq model
+api_key = os.environ.get("GROQ_API_KEY")
+llm = ChatGroq(model="llama-3.1-8b-instant", api_key=api_key)
 
 def generate_answer(query, context_chunks):
     formatted_contexts = []

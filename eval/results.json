@@ -1,8 +1,10 @@
 {
-    "timestamp": "2026-05-09T19:58:23.243317",
+    "timestamp": "2026-05-11T15:27:47.794793",
     "metrics": {
-        "faithfulness": NaN,
-        "answer_relevancy": 0.66597824715936,
-        "context_precision": 0.0
+        "faithfulness": 0.7413543543543543,
+        "answer_relevancy": 0.4574835890300517,
+        "context_precision": 0.5099999999563332
     },
-    "pass": 
+    "pass": false,
+    "total_evaluated": 50
+}
